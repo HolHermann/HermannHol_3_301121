@@ -1,3 +1,80 @@
-body{
-    background: #FFF;
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    &__img{
+        width: 100%;
+        text-align: center;
+        padding: 20px 0 10px 0;
+        // Box shadow à mettre 
+    }
+    &__location{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+        padding-right: 4%;
+        font-size: 1.2em;
+        background-color: #EDEDED;
+    }
+    .fa-map-marker-alt{
+        margin-right: 15px;
+    }
+}
+header img{
+    height: 30px; 
+}
+.heading-main{
+    background-color: #F7F7F7;
+    height: 270px;
+    h1{
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0 20%;
+        padding: 30px 0 0 0;
+    }
+    h3{
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: 100;
+    }
+    button{
+        background-color: #E18ADB;
+        border-color: #E18ADB;
+        border-radius: 20px;
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        margin: 30px auto 0 auto;     
+    }
+}
+.fonctionnement{
+    margin: 50px 0;
+    .fonctionnement__li{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        background-color: #F7F7F7;
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 1.2em;
+        
+        &:hover{
+            background-color: #F7F1FF;
+        }
+        i{
+            margin: 0 20px;
+        }
+        .fonctionnememnt__chiffre{
+            background-color: #A173E7;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: -10px;
+        }
+    }
 }
