@@ -41,8 +41,8 @@ header img{
         font-weight: 100;
     }
     button{
-        background-color: #E18ADB;
-        border-color: #E18ADB;
+        background: linear-gradient(#E483E2, #C077E1);
+        border-color: transparent;
         border-radius: 20px;
         color: white;
         padding: 10px 15px;
@@ -52,6 +52,9 @@ header img{
 }
 .fonctionnement{
     margin: 50px 0;
+    h2{
+        margin-left: 3%;
+    }
     .fonctionnement__li{
         display: flex;
         flex-direction: row;
@@ -65,6 +68,9 @@ header img{
         
         &:hover{
             background-color: #F7F1FF;
+            .fa-store, .fa-list-ul, .fa-mobile-alt{
+                color: #A173E7;
+            }
         }
         i{
             margin: 0 20px;
@@ -80,6 +86,7 @@ header img{
 }
 .restaurants{
     background-color: #F7F7F7;
+    height: 1450px;
     h2{
         padding-top: 70px;
         margin-left: 5.5%;
@@ -151,6 +158,13 @@ footer{
     i{
         font-size: 0.8em;
         margin-right: 10px;
+    }
+    ul{
+         margin-top: 25px;
+    }
+    .fa-hands{
+        font-size: 0.55em;
+        margin-right: 9px;
     }
    
 }

@@ -42,8 +42,8 @@ header img {
   font-weight: 100;
 }
 .heading-main button {
-  background-color: #E18ADB;
-  border-color: #E18ADB;
+  background: linear-gradient(#E483E2, #C077E1);
+  border-color: transparent;
   border-radius: 20px;
   color: white;
   padding: 10px 15px;
@@ -53,6 +53,9 @@ header img {
 
 .fonctionnement {
   margin: 50px 0;
+}
+.fonctionnement h2 {
+  margin-left: 3%;
 }
 .fonctionnement .fonctionnement__li {
   display: flex;
@@ -68,6 +71,9 @@ header img {
 .fonctionnement .fonctionnement__li:hover {
   background-color: #F7F1FF;
 }
+.fonctionnement .fonctionnement__li:hover .fa-store, .fonctionnement .fonctionnement__li:hover .fa-list-ul, .fonctionnement .fonctionnement__li:hover .fa-mobile-alt {
+  color: #A173E7;
+}
 .fonctionnement .fonctionnement__li i {
   margin: 0 20px;
 }
@@ -81,6 +87,7 @@ header img {
 
 .restaurants {
   background-color: #F7F7F7;
+  height: 1450px;
 }
 .restaurants h2 {
   padding-top: 70px;
@@ -154,6 +161,13 @@ footer li {
 footer i {
   font-size: 0.8em;
   margin-right: 10px;
+}
+footer ul {
+  margin-top: 25px;
+}
+footer .fa-hands {
+  font-size: 0.55em;
+  margin-right: 9px;
 }
 
 /*# sourceMappingURL=style.css.map */
