@@ -67,6 +67,7 @@ header img {
   padding: 10px 0;
   border-radius: 20px;
   font-size: 1.2em;
+  box-shadow: 0 0 20px rgba(94, 63, 63, 0.35);
 }
 .fonctionnement .fonctionnement__li:hover {
   background-color: #F7F1FF;
@@ -126,12 +127,20 @@ header img {
   font-size: 1.2em;
 }
 .restaurants__text .fa-heart {
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin: 0px;
 }
+.restaurants__article-nouveau {
+  position: relative;
+}
 .restaurants__text-nouveau {
-  display: none;
-  /* Masquer le texte nouveau pour l'instant */
+  padding: 4px 12px;
+  position: absolute;
+  color: #198E6E;
+  background-color: #99E2D0;
+  top: -2px;
+  right: 13px;
+  border-radius: 2px;
 }
 
 footer {

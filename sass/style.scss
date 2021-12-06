@@ -65,6 +65,7 @@ header img{
         padding: 10px 0;
         border-radius: 20px;
         font-size: 1.2em;
+        box-shadow: 0 0 20px rgba(94, 63, 63, 0.350);
         
         &:hover{
             background-color: #F7F1FF;
@@ -124,12 +125,21 @@ header img{
             font-size: 1.2em;
         }
         .fa-heart{
-            font-size: 1.7em;
+            font-size: 1.5em;
             margin: 0px;
         }
     }
+    &__article-nouveau{
+        position: relative;
+    }
     &__text-nouveau{
-        display: none; /* Masquer le texte nouveau pour l'instant */ 
+        padding: 4px 12px;
+        position: absolute;
+        color: #198E6E;
+        background-color: #99E2D0;
+        top: -2px;
+        right: 13px;
+        border-radius: 2px;
     }
 }
 footer{
