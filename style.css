@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -21,8 +26,7 @@ ul {
 .header .fa-map-marker-alt {
   margin-right: 15px;
 }
-
-header img {
+.header img {
   height: 30px;
 }
 
@@ -41,8 +45,8 @@ header img {
   text-align: center;
   font-weight: 100;
 }
-.heading-main button {
-  background: linear-gradient(#E483E2, #C077E1);
+.heading-main .btn {
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   border-color: transparent;
   border-radius: 20px;
   color: white;
@@ -54,10 +58,10 @@ header img {
 .fonctionnement {
   margin: 50px 0;
 }
-.fonctionnement h2 {
+.fonctionnement__header {
   margin-left: 3%;
 }
-.fonctionnement .fonctionnement__li {
+.fonctionnement__li {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -69,16 +73,16 @@ header img {
   font-size: 1.2em;
   box-shadow: 0 0 20px rgba(94, 63, 63, 0.35);
 }
-.fonctionnement .fonctionnement__li:hover {
+.fonctionnement__li:hover {
   background-color: #F7F1FF;
 }
-.fonctionnement .fonctionnement__li:hover .fa-store, .fonctionnement .fonctionnement__li:hover .fa-list-ul, .fonctionnement .fonctionnement__li:hover .fa-mobile-alt {
+.fonctionnement__li:hover .fa-store, .fonctionnement__li:hover .fa-list-ul, .fonctionnement__li:hover .fa-mobile-alt {
   color: #A173E7;
 }
-.fonctionnement .fonctionnement__li i {
+.fonctionnement__li i {
   margin: 0 20px;
 }
-.fonctionnement .fonctionnement__li .fonctionnememnt__chiffre {
+.fonctionnement__chiffre {
   background-color: #A173E7;
   color: white;
   padding: 2px 8px;
