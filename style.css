@@ -9,10 +9,25 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.liens {
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .header__img {
   width: 100%;
   text-align: center;
   padding: 20px 0 10px 0;
+  box-shadow: 0 0 20px rgba(94, 63, 63, 0.35);
+  margin-bottom: 2px;
 }
 .header__location {
   display: flex;
@@ -77,17 +92,22 @@ ul {
   background-color: #F7F1FF;
 }
 .fonctionnement__li:hover .fa-store, .fonctionnement__li:hover .fa-list-ul, .fonctionnement__li:hover .fa-mobile-alt {
-  color: #A173E7;
+  color: #9356DC;
 }
 .fonctionnement__li i {
   margin: 0 20px;
 }
 .fonctionnement__chiffre {
-  background-color: #A173E7;
+  background-color: #9356DC;
   color: white;
   padding: 2px 8px;
   border-radius: 20px;
   margin-left: -10px;
+}
+.fonctionnement .fa-size {
+  width: 30px;
+  text-align: center;
+  color: #868686;
 }
 
 .restaurants {
@@ -132,7 +152,7 @@ ul {
 }
 .restaurants__text .fa-heart {
   font-size: 1.5em;
-  margin: 0px;
+  margin-right: 10px;
 }
 .restaurants__article-nouveau {
   position: relative;
@@ -148,7 +168,12 @@ ul {
 }
 
 .menu--nav {
-  margin-top: 20px;
+  margin: 20px 0 10px 0;
+}
+.menu--nav .fa-arrow-left {
+  margin-left: 6%;
+  margin-right: -6%;
+  font-size: 1.2em;
 }
 .menu--nav i {
   float: left;
@@ -163,6 +188,7 @@ ul {
 
 .menu--img_header {
   width: 100%;
+  max-height: 300px;
 }
 
 .menu--section {
@@ -171,17 +197,30 @@ ul {
   margin-top: -60px;
   position: relative;
 }
+.menu--section__text {
+  margin: 0 3%;
+}
 .menu--section__header {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0 0;
 }
 .menu--section__titre {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 0.9em;
+  margin-left: 2%;
+}
+.menu--section .fa-heart {
+  margin-right: 25px;
+  font-size: 1.4em;
+}
+.menu--section__sous-titre {
   text-transform: uppercase;
   font-weight: 100;
+  font-size: 1.1em;
 }
 .menu--section__article {
   background-color: #FFF;
@@ -189,22 +228,30 @@ ul {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
   border-radius: 20px;
-  padding: 0 15px;
   box-shadow: 0 0 20px rgba(94, 63, 63, 0.2);
 }
 .menu--section__article h3 {
   margin: 0;
   margin-top: 15px;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 .menu--section__article p {
   margin: 0px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: 300;
+}
+.menu--section__article p.menu--section__prix {
+  margin-right: 10px;
+  font-weight: 500;
+}
+.menu--section__menus {
+  margin-left: 10px;
 }
 
 .menu--btn {

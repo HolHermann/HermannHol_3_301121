@@ -8,11 +8,23 @@ ul{
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: #FFF; // À vérifier 
+}
+.liens{
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
 .header{
     &__img{
         width: 100%;
         text-align: center;
         padding: 20px 0 10px 0;
+        box-shadow: 0 0 20px rgba(94, 63, 63, 0.350);
+        margin-bottom: 2px;
         // Box shadow à mettre 
     }
     &__location{
@@ -75,7 +87,7 @@ ul{
         &:hover{
             background-color: #F7F1FF;
             .fa-store, .fa-list-ul, .fa-mobile-alt{
-                color: #A173E7;
+                color: #9356DC;
             }
         }
         i{
@@ -83,11 +95,16 @@ ul{
         }
     }
     &__chiffre{
-        background-color: #A173E7;
+        background-color: #9356DC;
         color: white;
         padding: 2px 8px;
         border-radius: 20px;
         margin-left: -10px;
+    }
+    .fa-size{
+        width: 30px;
+        text-align: center;
+        color: #868686;
     }
 }
 .restaurants{
@@ -131,7 +148,7 @@ ul{
         }
         .fa-heart{
             font-size: 1.5em;
-            margin: 0px;
+            margin-right: 10px;
         }
     }
     &__article-nouveau{
@@ -147,10 +164,15 @@ ul{
         border-radius: 2px;
     }
 }
-// Début de la copie de la page menu 
+// CSS DE LA PAGE MENU 
 
 .menu--nav{
-    margin-top: 20px;
+    margin: 20px 0 10px 0;
+    .fa-arrow-left{
+        margin-left: 6%;
+        margin-right: -6%;
+        font-size: 1.2em;
+    }
     i{
         
        float: left;
@@ -159,29 +181,44 @@ ul{
     &__logo{
         text-align: center;
         img{
-            width: 50%;
+            width: 50%; 
         }
+       
     }
 }
 .menu--img_header{
     width: 100%;
+    max-height: 300px;
 }
 .menu--section{
     border-radius: 40px 40px 0 0;
     background-color: #FFF;
     margin-top: -60px;
     position: relative;
+    &__text{
+        margin: 0 3%;
+    }
     &__header{
         display: flex;
         flex-direction: row;
         align-items: baseline;
         justify-content: space-between;
-        margin: 0 ;
-        padding: 0; 
+        margin: 0;
+        padding: 20px 0 0 0; 
     }
     &__titre{
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 0.9em;
+        margin-left: 2%;
+    }
+    .fa-heart{
+        margin-right: 25px;
+        font-size: 1.4em;
+    }
+    &__sous-titre{
         text-transform: uppercase;
         font-weight: 100;
+        font-size: 1.1em;
     }
     &__article{
         background-color: #FFF;
@@ -189,22 +226,32 @@ ul{
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 20px auto;
         border-radius: 20px;
-        padding: 0 15px;
+        //padding: 0 15px;
         box-shadow: 0 0 20px rgba(94, 63, 63, 0.200);
         h3{
             margin: 0;
             margin-top: 15px;
-            font-size: 1.3em;
+            font-size: 1.2em;
+            font-weight: 500;
         }
         p{
             margin: 0px;
             margin-top: 10px;
             margin-bottom: 10px;
-            font-size: 1.2em;
+            font-size: 1em;
+            font-weight: 300;
+            &.menu--section__prix{
+                margin-right: 10px; // A réécrire 
+                font-weight: 500;
+            }
+            
         }
+    }
+    &__menus{
+        margin-left: 10px;
     }
 }
 
@@ -249,7 +296,7 @@ footer{
     }
     ul{
          margin-top: 25px;
-         
+
     }
     .fa-hands{
         font-size: 0.55em;
