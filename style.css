@@ -222,6 +222,16 @@ html {
   text-transform: uppercase;
   font-weight: 100;
   font-size: 1.1em;
+  position: relative;
+}
+.menu--section__sous-titre::after {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  left: 0px;
+  bottom: -7px;
 }
 .menu--section__article {
   background-color: #FFF;
