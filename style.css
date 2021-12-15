@@ -261,7 +261,7 @@ html {
 }
 .menu--section__sous-titre {
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.1em;
   position: relative;
 }
