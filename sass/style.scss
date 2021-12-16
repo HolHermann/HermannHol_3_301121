@@ -4,14 +4,18 @@ body{
     font-family: 'Roboto', sans-serif;
     // Animation chargement de la page 
 
-    -webkit-animation: chargementPage 6s both;
-    animation: chargementPage 6s both;
+    /*-webkit-animation: chargementPage 6s both;
+    animation: chargementPage 6s both;*/
 
     // Fin de l'animation sur le chargement de la page 
     
 }
 // Barres de chargement 
-.section-barres { background-color: #FF0000;}
+/*
+.section-barres { 
+    background-color: #FF0000;
+    animation: chargement 6s both; // A mettre en position absolute 
+}
 .loader {
 	position: relative;
 	display: inline-block;
@@ -44,7 +48,7 @@ body{
 	left: 30px;
 	-webkit-animation: grow 1.5s linear -1s infinite;
 	animation: grow 1.5s linear -1s infinite; // animation barre 3 
-}
+} */
 // Fin des barres de chargement 
 ul{
     list-style-type: none;
@@ -61,6 +65,7 @@ a{
 html{
     scroll-behavior: smooth;
 }
+
 .header{
     &__img{
         width: 100%;
@@ -70,21 +75,36 @@ html{
         margin-bottom: 2px;
         // Box shadow à mettre 
     }
+    &__form{
+        height: 60px;
+        background-color: red;
+        &--search{
+            border: none;
+            width: 150px;
+            background: none;
+        }
+    }
     &__location{
+        height: 60px;
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: center;
         justify-content: center;
-        padding-right: 4%;
         font-size: 1.2em;
         background-color: #EDEDED;
     }
     .fa-map-marker-alt{
         margin-right: 15px;
+        margin-top: -3px;
+        font-size: 0.9Em;
     }
     img{
         height: 30px;
     }
+}
+input::placeholder{
+    color: black;
+    opacity: 1;
 }
 .heading-main{
     background-color: #F7F7F7;
@@ -101,13 +121,16 @@ html{
         font-weight: 100;
     }
     .btn{
-        background: linear-gradient(175deg,#FF79DA, #9356DC);
-        border-color: transparent;
+        background: linear-gradient(175deg, #FF79DA, #9356DC);
+        border-color:  #FF79DA;
         border-radius: 20px;
         color: white;
-        padding: 10px 15px;
+        padding: 12px 30px;
         display: block;
-        margin: 30px auto 0 auto;     
+        margin: 30px auto 0 auto;
+        &:hover{
+            box-shadow: 1px 1px 10px black;
+        }     
     }
 }
 .fonctionnement{
@@ -210,10 +233,13 @@ html{
 // CSS DE LA PAGE MENU 
 
 .menu--nav{
-    margin: 20px 0 10px 0;
+    margin: 0px;
+    position: relative;
+    padding: 15px;
     .fa-arrow-left{
-        margin-left: 6%;
-        margin-right: -6%;
+        position: absolute;
+        //top: 50%;
+        left: 30px;
         font-size: 1.2em;
         color: black;
     }
@@ -227,12 +253,15 @@ html{
         img{
             width: 50%; 
         }
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 2em;
        
     }
 }
 .menu--img_header{
     width: 100%;
     max-height: 300px;
+    object-fit: cover;
 }
 .menu--section{
     border-radius: 40px 40px 0 0;
@@ -287,17 +316,19 @@ html{
         box-shadow: 0 0 20px rgba(94, 63, 63, 0.200);
 
         // Animation pour les articles 
-
+        
         -webkit-animation: remonteeArticle 3s both;
         animation: remonteeArticle 3s both;
 
         // Fin de l'animation sur les articles 
+        
 
         h3{
             margin: 0;
             margin-top: 15px;
             font-size: 1.2em;
             font-weight: 500;
+            text-overflow: ellipsis;
         }
         p{
             margin: 0px;
@@ -305,6 +336,7 @@ html{
             margin-bottom: 10px;
             font-size: 1em;
             font-weight: 300;
+            text-overflow: ellipsis;
             &.menu--section__prix{
                 margin-right: 10px; // A réécrire 
                 font-weight: 500;
@@ -316,16 +348,48 @@ html{
         margin-left: 10px;
     }
 }
-
+.menu--section__entree .menu--section__article:nth-of-type(1){
+    animation-delay: 0.1s;
+}
+.menu--section__entree .menu--section__article:nth-of-type(2){
+    animation-delay: 0.2s;
+}
+.menu--section__entree .menu--section__article:nth-of-type(3){
+    animation-delay: 0.3s;
+}
+.menu--section__entree .menu--section__article:nth-of-type(4){
+    animation-delay: 0.4s;
+}
+.menu--section__plats .menu--section__article:nth-of-type(1){
+    animation-delay: 0.5s;
+}
+.menu--section__plats .menu--section__article:nth-of-type(2){
+    animation-delay: 0.6s;
+}
+.menu--section__plats .menu--section__article:nth-of-type(3){
+    animation-delay: 0.7s;
+}
+.menu--section__desserts .menu--section__article:nth-of-type(1){
+    animation-delay: 0.8s;
+}
+.menu--section__desserts .menu--section__article:nth-of-type(2){
+    animation-delay: 0.9s;
+}
+.menu--section__desserts .menu--section__article:nth-of-type(3){
+    animation-delay: 1s;
+}
 .menu--btn{
-    background: linear-gradient(#E483E2, #C077E1);
-    border-color: transparent;
+    background: linear-gradient(175deg, #FF79DA, #9356DC);
+    border-color:  #FF79DA;
     border-radius: 40px;
-    color: white;
+    color: #FFF;
     padding: 15px 55px;
     display: block;
     margin: 50px auto 70px auto;  
-    font-size: 1.2em;   
+    font-size: 1.2em;
+    &:hover{
+        box-shadow: 1px 1px 10px black;
+    }   
 }
 // Début du copie de la fonction 
 @-webkit-keyframes remonteeArticle {
@@ -366,6 +430,9 @@ footer{
             flex-direction: row;
             align-items: baseline;
         }
+        &--span{
+            width: 25px;
+        }
     }
     img{
         filter: invert(100%); 
@@ -388,9 +455,8 @@ footer{
 
     }
     .fa-hands{
-        font-size: 0.55em;
-        margin-right: 9px;
-    }  
+        font-size: 0.70em;
+    }
 }
 //Animation pour le chargement de la page 
 
@@ -417,6 +483,31 @@ footer{
       -webkit-transform: background(#FFF);
               transform: background(#FFF);
       opacity: 1;
+    }
+  }
+@-webkit-keyframes chargement {
+    0% {
+        -webkit-transform: background(#FFF);
+                transform: background(#FFF);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: background(#FFF);
+                transform: background(#FFF);
+        opacity: 0;
+      }
+  }
+  
+  @keyframes chargement {
+    0% {
+      -webkit-transform: background(#FFF);
+              transform: background(#FFF);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: background(#FFF);
+              transform: background(#FFF);
+      opacity: 0;
     }
   }
 // Fin animation chargement de la page 

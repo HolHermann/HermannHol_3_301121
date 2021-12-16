@@ -1,49 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-  -webkit-animation: chargementPage 6s both;
-  animation: chargementPage 6s both;
+  /*-webkit-animation: chargementPage 6s both;
+  animation: chargementPage 6s both;*/
 }
 
-.section-barres {
-  background-color: #FF0000;
+/*
+.section-barres { 
+    background-color: #FF0000;
+    animation: chargement 6s both; // A mettre en position absolute 
 }
-
 .loader {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
 }
-
 .loader-bars:before,
 .loader-bars:after,
 .loader-bars span {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10px;
-  height: 30px;
-  background-color: #fff;
-  -webkit-animation: grow 1.5s linear infinite;
-  animation: grow 1.5s linear infinite;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 30px;
+	background-color: #fff; // couleur des barres de chargement
+	-webkit-animation: grow 1.5s linear infinite;
+	animation: grow 1.5s linear infinite; // animation barre 1 
 }
 
 .loader-bars:after {
-  left: 15px;
-  -webkit-animation: grow 1.5s linear -0.5s infinite;
-  animation: grow 1.5s linear -0.5s infinite;
+	left: 15px;
+	-webkit-animation: grow 1.5s linear -.5s infinite;
+	animation: grow 1.5s linear -.5s infinite; // animation barre 2 
 }
 
 .loader-bars span {
-  left: 30px;
-  -webkit-animation: grow 1.5s linear -1s infinite;
-  animation: grow 1.5s linear -1s infinite;
-}
-
+	left: 30px;
+	-webkit-animation: grow 1.5s linear -1s infinite;
+	animation: grow 1.5s linear -1s infinite; // animation barre 3 
+} */
 ul {
   list-style-type: none;
   margin: 0;
@@ -70,20 +69,36 @@ html {
   box-shadow: 0 0 20px rgba(94, 63, 63, 0.35);
   margin-bottom: 2px;
 }
+.header__form {
+  height: 60px;
+  background-color: red;
+}
+.header__form--search {
+  border: none;
+  width: 150px;
+  background: none;
+}
 .header__location {
+  height: 60px;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-  padding-right: 4%;
   font-size: 1.2em;
   background-color: #EDEDED;
 }
 .header .fa-map-marker-alt {
   margin-right: 15px;
+  margin-top: -3px;
+  font-size: 0.9Em;
 }
 .header img {
   height: 30px;
+}
+
+input::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .heading-main {
@@ -103,12 +118,15 @@ html {
 }
 .heading-main .btn {
   background: linear-gradient(175deg, #FF79DA, #9356DC);
-  border-color: transparent;
+  border-color: #FF79DA;
   border-radius: 20px;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 30px;
   display: block;
   margin: 30px auto 0 auto;
+}
+.heading-main .btn:hover {
+  box-shadow: 1px 1px 10px black;
 }
 
 .fonctionnement {
@@ -209,11 +227,13 @@ html {
 }
 
 .menu--nav {
-  margin: 20px 0 10px 0;
+  margin: 0px;
+  position: relative;
+  padding: 15px;
 }
 .menu--nav .fa-arrow-left {
-  margin-left: 6%;
-  margin-right: -6%;
+  position: absolute;
+  left: 30px;
   font-size: 1.2em;
   color: black;
 }
@@ -223,6 +243,8 @@ html {
 }
 .menu--nav__logo {
   text-align: center;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2em;
 }
 .menu--nav__logo img {
   width: 50%;
@@ -231,6 +253,7 @@ html {
 .menu--img_header {
   width: 100%;
   max-height: 300px;
+  object-fit: cover;
 }
 
 .menu--section {
@@ -292,6 +315,7 @@ html {
   margin-top: 15px;
   font-size: 1.2em;
   font-weight: 500;
+  text-overflow: ellipsis;
 }
 .menu--section__article p {
   margin: 0px;
@@ -299,6 +323,7 @@ html {
   margin-bottom: 10px;
   font-size: 1em;
   font-weight: 300;
+  text-overflow: ellipsis;
 }
 .menu--section__article p.menu--section__prix {
   margin-right: 10px;
@@ -308,15 +333,58 @@ html {
   margin-left: 10px;
 }
 
+.menu--section__entree .menu--section__article:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.menu--section__entree .menu--section__article:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.menu--section__entree .menu--section__article:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.menu--section__entree .menu--section__article:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.menu--section__plats .menu--section__article:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.menu--section__plats .menu--section__article:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+.menu--section__plats .menu--section__article:nth-of-type(3) {
+  animation-delay: 0.7s;
+}
+
+.menu--section__desserts .menu--section__article:nth-of-type(1) {
+  animation-delay: 0.8s;
+}
+
+.menu--section__desserts .menu--section__article:nth-of-type(2) {
+  animation-delay: 0.9s;
+}
+
+.menu--section__desserts .menu--section__article:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
 .menu--btn {
-  background: linear-gradient(#E483E2, #C077E1);
-  border-color: transparent;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  border-color: #FF79DA;
   border-radius: 40px;
-  color: white;
+  color: #FFF;
   padding: 15px 55px;
   display: block;
   margin: 50px auto 70px auto;
   font-size: 1.2em;
+}
+.menu--btn:hover {
+  box-shadow: 1px 1px 10px black;
 }
 
 @-webkit-keyframes remonteeArticle {
@@ -355,6 +423,9 @@ footer .text-footer__img-text {
   flex-direction: row;
   align-items: baseline;
 }
+footer .text-footer--span {
+  width: 25px;
+}
 footer img {
   filter: invert(100%);
   -webkit-filter: invert(100%);
@@ -375,8 +446,7 @@ footer ul {
   margin-top: 25px;
 }
 footer .fa-hands {
-  font-size: 0.55em;
-  margin-right: 9px;
+  font-size: 0.7em;
 }
 
 @-webkit-keyframes chargementPage {
@@ -401,6 +471,30 @@ footer .fa-hands {
     -webkit-transform: background(#FFF);
     transform: background(#FFF);
     opacity: 1;
+  }
+}
+@-webkit-keyframes chargement {
+  0% {
+    -webkit-transform: background(#FFF);
+    transform: background(#FFF);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: background(#FFF);
+    transform: background(#FFF);
+    opacity: 0;
+  }
+}
+@keyframes chargement {
+  0% {
+    -webkit-transform: background(#FFF);
+    transform: background(#FFF);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: background(#FFF);
+    transform: background(#FFF);
+    opacity: 0;
   }
 }
 @-webkit-keyframes grow {
