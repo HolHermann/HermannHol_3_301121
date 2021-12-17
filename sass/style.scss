@@ -133,6 +133,11 @@ input::placeholder{
         }     
     }
 }
+@media (min-width : 992px){
+    .heading-main{
+        height: 210px;
+    }
+}
 .fonctionnement{
     margin: 50px 0;
     &__header{
@@ -171,6 +176,21 @@ input::placeholder{
         width: 30px;
         text-align: center;
         color: #868686;
+    }
+}
+@media (min-width : 992px){
+    .fonctionnement{
+        margin: 0px;
+        &__ul{
+            display: flex;
+            flex-direction: row;
+        }
+        &__li{
+            width: 30%;
+        }
+        p{
+            font-size: 0.9em;
+        }
     }
 }
 .restaurants{
@@ -228,6 +248,26 @@ input::placeholder{
         top: -2px;
         right: 13px;
         border-radius: 2px;
+    }
+}
+@media (min-width : 992px){
+    .restaurants{
+        height: auto;
+        h2{
+            padding-top: 40px;
+            margin: 0px 0 0px 2.5%;
+        }
+        &__section{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .liens{
+            width: 50%;
+        }
+    
+        
+
     }
 }
 // CSS DE LA PAGE MENU 

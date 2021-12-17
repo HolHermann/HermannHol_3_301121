@@ -129,6 +129,11 @@ input::placeholder {
   box-shadow: 1px 1px 10px black;
 }
 
+@media (min-width: 992px) {
+  .heading-main {
+    height: 210px;
+  }
+}
 .fonctionnement {
   margin: 50px 0;
 }
@@ -169,6 +174,21 @@ input::placeholder {
   color: #868686;
 }
 
+@media (min-width: 992px) {
+  .fonctionnement {
+    margin: 0px;
+  }
+  .fonctionnement__ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .fonctionnement__li {
+    width: 30%;
+  }
+  .fonctionnement p {
+    font-size: 0.9em;
+  }
+}
 .restaurants {
   background-color: #F7F7F7;
   height: 1450px;
@@ -226,6 +246,23 @@ input::placeholder {
   border-radius: 2px;
 }
 
+@media (min-width: 992px) {
+  .restaurants {
+    height: auto;
+  }
+  .restaurants h2 {
+    padding-top: 40px;
+    margin: 0px 0 0px 2.5%;
+  }
+  .restaurants__section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants .liens {
+    width: 50%;
+  }
+}
 .menu--nav {
   margin: 0px;
   position: relative;
