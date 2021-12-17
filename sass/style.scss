@@ -388,6 +388,21 @@ input::placeholder{
         margin-left: 10px;
     }
 }
+@media (min-width : 992px){
+    .menu--section{
+        &__responsive{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__article{
+            width: 300px;
+        }
+        &__sous-titre{
+            margin-bottom: 30px;
+        }
+    }
+}
 .menu--section__entree .menu--section__article:nth-of-type(1){
     animation-delay: 0.1s;
 }
