@@ -318,6 +318,7 @@ input::placeholder{
         justify-content: space-between;
         margin: 0;
         padding: 20px 0 0 0; 
+        position: relative;
     }
     &__titre{
         font-family: 'Shrikhand', sans-serif;
@@ -326,7 +327,28 @@ input::placeholder{
     }
     .fa-heart{
         margin-right: 25px;
-        font-size: 1.4em;
+        font-size: 1.4em;  
+        &.vide{
+            position: absolute;
+            top: 45px;
+            right: 4%;
+            opacity: 1;
+            &:hover{
+                opacity: 0;
+            }
+        }
+        &.plein{
+            position: absolute;
+            top: 45px;
+            right: 4%;
+            opacity: 0;
+            &:hover{
+                opacity: 1;
+                background-image: linear-gradient( 175deg, #ff79da, #9356dc);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
     &__sous-titre{
         text-transform: uppercase;
@@ -394,9 +416,15 @@ input::placeholder{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         &__article{
             width: 300px;
+        }
+        &__header{
+            max-width: 500px;
+            margin: 20px auto;
         }
         &__sous-titre{
             margin-bottom: 30px;
