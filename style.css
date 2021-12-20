@@ -151,6 +151,7 @@ input::placeholder {
   border-radius: 20px;
   font-size: 1.2em;
   box-shadow: 0 0 20px rgba(94, 63, 63, 0.35);
+  cursor: pointer;
 }
 .fonctionnement__li:hover {
   background-color: #F7F1FF;
