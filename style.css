@@ -403,9 +403,6 @@ input::placeholder {
     max-width: 1300px;
     margin: 0 auto;
   }
-  .menu--section__article {
-    width: 300px;
-  }
   .menu--section__header {
     max-width: 500px;
     margin: 20px auto;
