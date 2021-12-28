@@ -133,7 +133,7 @@ input::placeholder{
         }     
     }
 }
-@media (min-width : 992px){
+@media (min-width : 1100px){
     .heading-main{
         height: 210px;
     }
@@ -179,7 +179,7 @@ input::placeholder{
         color: #868686;
     }
 }
-@media (min-width : 992px){
+@media (min-width : 1100px){
     .fonctionnement{
         margin: 0px;
         &__ul{
@@ -217,12 +217,41 @@ input::placeholder{
             border-radius: 20px 20px 0 0;
         }
     }
+    &__coeurs{
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        &:hover{
+            .vide{
+                opacity: 0;
+                transition-duration: 2s;
+            }
+            .plein{
+                opacity: 1;
+                transition-duration: 2s;
+            }
+        }
+
+    }
+    .vide{
+        opacity: 1;
+    }
+    .plein{
+        position: absolute;
+        top: 1.2px;
+        right: 0px;
+        opacity: 0;
+        background-image: linear-gradient( 175deg, #ff79da, #9356dc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        } 
     &__text{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         margin: 10px 30px 0 15px;
+        position: relative;
         h3{
             margin-top: 0px;
             padding: 0px;
@@ -251,7 +280,10 @@ input::placeholder{
         border-radius: 2px;
     }
 }
-@media (min-width : 992px){
+li.restaurants__coeurs::marker{
+   color: #FFF;   // A vérifier 
+}
+@media (min-width : 1100px){
     .restaurants{
         height: auto;
         h2{
@@ -266,9 +298,6 @@ input::placeholder{
         .liens{
             width: 50%;
         }
-    
-        
-
     }
 }
 // CSS DE LA PAGE MENU 
@@ -279,15 +308,13 @@ input::placeholder{
     padding: 15px;
     .fa-arrow-left{
         position: absolute;
-        //top: 50%;
+        top: 35%;
         left: 30px;
         font-size: 1.2em;
         color: black;
     }
-    i{
-        
-       float: left;
-       margin-top: 2%;
+    i{ 
+       float: left;  
     }
     &__logo{
         text-align: center;
@@ -295,8 +322,7 @@ input::placeholder{
             width: 50%; 
         }
         font-family: 'Shrikhand', sans-serif;
-        font-size: 2em;
-       
+        font-size: 2em;   
     }
 }
 .menu--img_header{
@@ -326,33 +352,35 @@ input::placeholder{
         font-size: 0.9em;
         margin-left: 2%;
     }
-    .fa-heart{
-        margin-right: 25px;
-        font-size: 1.4em;  
-        &.vide{
-            position: absolute;
-            top: 45px;
-            right: 4%;
-            opacity: 1;
-            &:hover{
+    &__coeurs{
+        font-size: 1.4em;
+        cursor: pointer;
+        position: absolute;
+        top: 45px;
+        right: 20px;
+        &:hover{
+            .vide{
                 opacity: 0;
+                transition-duration: 2s;
             }
-        }
-        &.plein{
-            position: absolute;
-            font-size: 1.6em;
-            top: 43px;
-            right: 3.5%;
-            opacity: 0;
-            &:hover{
-                transition: 3s;
+            .plein{
                 opacity: 1;
-                background-image: linear-gradient( 175deg, #ff79da, #9356dc);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                transition-duration: 2s;
             }
         }
     }
+        .vide{
+            opacity: 1;
+        }
+        .plein{
+            position: absolute;
+            top: 1.2px;
+            right: 0px;
+            opacity: 0;
+            background-image: linear-gradient( 175deg, #ff79da, #9356dc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            }  
     &__sous-titre{
         text-transform: uppercase;
         font-weight: 300;
@@ -369,6 +397,7 @@ input::placeholder{
         }
     }
     &__article{
+        position: relative;
         background-color: #FFF;
         display: flex;
         flex-direction: row;
@@ -377,8 +406,8 @@ input::placeholder{
         width: 100%;
         margin: 20px auto;
         border-radius: 20px;
-        //padding: 0 15px;
         box-shadow: 0 0 20px rgba(94, 63, 63, 0.200);
+        overflow: hidden;
 
         // Animation pour les articles 
         
@@ -386,14 +415,27 @@ input::placeholder{
         animation: remonteeArticle 3s both;
 
         // Fin de l'animation sur les articles 
-        
-
+        // Hover block vert 
+        &:hover{
+            .menu--section__conteneur{
+                visibility: visible;
+                right: 0;
+            }
+            .menu--section__check i{
+                animation: rotation 1s both;
+            }
+            p.menu--section__prix{
+                margin-right: 100px;
+            }
+        }
+        // Fin de l'hover du block vert 
         h3{
             margin: 0;
             margin-top: 15px;
             font-size: 1.2em;
             font-weight: 500;
             text-overflow: ellipsis;
+            overflow: hidden;
         }
         p{
             margin: 0px;
@@ -402,18 +444,42 @@ input::placeholder{
             font-size: 1em;
             font-weight: 300;
             text-overflow: ellipsis;
+            overflow: hidden;
             &.menu--section__prix{
                 margin-right: 10px; // A réécrire 
                 font-weight: 500;
-            }
-            
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }   
         }
     }
     &__menus{
         margin-left: 10px;
     }
+    &__conteneur {
+        //visibility: hidden;
+        position: absolute;
+        right: -80px;
+        background-color: #99E2D0;
+        width: 80px;
+        height: 75px;
+        border-radius: 0 20px 20px 0;
+        display:flex;
+        align-items: center;
+        justify-content: center;         
+    }
+    &__check {
+        color:#99E2D0;
+        height: 25px;
+        width: 25px;
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;  
+    }
 }
-@media (min-width : 992px){
+@media (min-width : 1100px){
     .menu--section{
         &__responsive{
             display: flex;
@@ -422,9 +488,6 @@ input::placeholder{
             max-width: 1300px;
             margin: 0 auto;
         }
-        &__article{
-           // width: 300px;
-        }
         &__header{
             max-width: 500px;
             margin: 20px auto;
@@ -432,8 +495,23 @@ input::placeholder{
         &__sous-titre{
             margin-bottom: 30px;
         }
+        &__article{
+            width: 350px;
+            height: 75.5px;
+        }
     }
 }
+// Fonction rotation validé
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+}
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Fin fonction rotation validé 
 .menu--section__entree .menu--section__article:nth-of-type(1){
     animation-delay: 0.1s;
 }
