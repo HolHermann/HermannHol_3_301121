@@ -2,19 +2,21 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    // Animation chargement de la page 
-
-    /*-webkit-animation: chargementPage 6s both;
-    animation: chargementPage 6s both;*/
-
-    // Fin de l'animation sur le chargement de la page 
-    
+    position: relative;
 }
 // Barres de chargement 
-/*
+
 .section-barres { 
-    background-color: #FF0000;
-    animation: chargement 6s both; // A mettre en position absolute 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: #FFF;
+    animation: chargementt 4s both; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
 }
 .loader {
 	position: relative;
@@ -23,32 +25,37 @@ body{
 	height: 50px;
 	vertical-align: middle;
 }
+.loading{
+    margin-bottom: 50px;
+    font-size: 4em;
+    font-family: 'Shrikhand', sans-serif;
+}
 .loader-bars:before,
 .loader-bars:after,
 .loader-bars span {
 	content: '';
 	display: block;
 	position: absolute;
-	left: 0;
+	left: -50px;
 	top: 0;
-	width: 10px;
-	height: 30px;
-	background-color: #fff; // couleur des barres de chargement
+	width: 30px;
+	height: 60px;
+	background-color: purple; // couleur des barres de chargement
 	-webkit-animation: grow 1.5s linear infinite;
 	animation: grow 1.5s linear infinite; // animation barre 1 
 }
 
 .loader-bars:after {
-	left: 15px;
+	left: 0px;
 	-webkit-animation: grow 1.5s linear -.5s infinite;
 	animation: grow 1.5s linear -.5s infinite; // animation barre 2 
 }
 
 .loader-bars span {
-	left: 30px;
+	left: 50px;
 	-webkit-animation: grow 1.5s linear -1s infinite;
 	animation: grow 1.5s linear -1s infinite; // animation barre 3 
-} */
+} 
 // Fin des barres de chargement 
 ul{
     list-style-type: none;
@@ -636,32 +643,7 @@ footer{
 }
 //Animation pour le chargement de la page 
 
-@-webkit-keyframes chargementPage {
-    0% {
-        -webkit-transform: background(#FFF);
-                transform: background(#FFF);
-        opacity: 0;
-      }
-      100% {
-        -webkit-transform: background(#FFF);
-                transform: background(#FFF);
-        opacity: 1;
-      }
-  }
-  
-  @keyframes chargementPage {
-    0% {
-      -webkit-transform: background(#FFF);
-              transform: background(#FFF);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: background(#FFF);
-              transform: background(#FFF);
-      opacity: 1;
-    }
-  }
-@-webkit-keyframes chargement {
+@-webkit-keyframes chargementt {
     0% {
         -webkit-transform: background(#FFF);
                 transform: background(#FFF);
@@ -674,7 +656,7 @@ footer{
       }
   }
   
-  @keyframes chargement {
+  @keyframes chargementt {
     0% {
       -webkit-transform: background(#FFF);
               transform: background(#FFF);
@@ -684,6 +666,7 @@ footer{
       -webkit-transform: background(#FFF);
               transform: background(#FFF);
       opacity: 0;
+      visibility: hidden;
     }
   }
 // Fin animation chargement de la page 

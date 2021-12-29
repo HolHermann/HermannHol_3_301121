@@ -1,48 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-  /*-webkit-animation: chargementPage 6s both;
-  animation: chargementPage 6s both;*/
+  position: relative;
 }
 
-/*
-.section-barres { 
-    background-color: #FF0000;
-    animation: chargement 6s both; // A mettre en position absolute 
+.section-barres {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: #FFF;
+  animation: chargementt 4s both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .loader {
-	position: relative;
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
 }
+
+.loading {
+  margin-bottom: 50px;
+  font-size: 4em;
+  font-family: "Shrikhand", sans-serif;
+}
+
 .loader-bars:before,
 .loader-bars:after,
 .loader-bars span {
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 10px;
-	height: 30px;
-	background-color: #fff; // couleur des barres de chargement
-	-webkit-animation: grow 1.5s linear infinite;
-	animation: grow 1.5s linear infinite; // animation barre 1 
+  content: "";
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 30px;
+  height: 60px;
+  background-color: purple;
+  -webkit-animation: grow 1.5s linear infinite;
+  animation: grow 1.5s linear infinite;
 }
 
 .loader-bars:after {
-	left: 15px;
-	-webkit-animation: grow 1.5s linear -.5s infinite;
-	animation: grow 1.5s linear -.5s infinite; // animation barre 2 
+  left: 0px;
+  -webkit-animation: grow 1.5s linear -0.5s infinite;
+  animation: grow 1.5s linear -0.5s infinite;
 }
 
 .loader-bars span {
-	left: 30px;
-	-webkit-animation: grow 1.5s linear -1s infinite;
-	animation: grow 1.5s linear -1s infinite; // animation barre 3 
-} */
+  left: 50px;
+  -webkit-animation: grow 1.5s linear -1s infinite;
+  animation: grow 1.5s linear -1s infinite;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -609,31 +624,7 @@ footer .fa-hands {
   font-size: 0.7em;
 }
 
-@-webkit-keyframes chargementPage {
-  0% {
-    -webkit-transform: background(#FFF);
-    transform: background(#FFF);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: background(#FFF);
-    transform: background(#FFF);
-    opacity: 1;
-  }
-}
-@keyframes chargementPage {
-  0% {
-    -webkit-transform: background(#FFF);
-    transform: background(#FFF);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: background(#FFF);
-    transform: background(#FFF);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes chargement {
+@-webkit-keyframes chargementt {
   0% {
     -webkit-transform: background(#FFF);
     transform: background(#FFF);
@@ -645,7 +636,7 @@ footer .fa-hands {
     opacity: 0;
   }
 }
-@keyframes chargement {
+@keyframes chargementt {
   0% {
     -webkit-transform: background(#FFF);
     transform: background(#FFF);
@@ -655,6 +646,7 @@ footer .fa-hands {
     -webkit-transform: background(#FFF);
     transform: background(#FFF);
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes grow {
