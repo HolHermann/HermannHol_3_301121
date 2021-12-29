@@ -280,9 +280,6 @@ input::placeholder{
         border-radius: 2px;
     }
 }
-li.restaurants__coeurs::marker{
-   color: red;   // A vérifier 
-}
 @media (min-width : 1100px){
     .restaurants{
         height: auto;
