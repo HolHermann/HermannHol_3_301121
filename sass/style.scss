@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
-
 body{
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
 // Barres de chargement 
-
 .section-barres { 
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: 10000;
     background: #FFF;
-    animation: chargementt 4s both; 
+    animation: chargementPage 3s both; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,13 +42,11 @@ body{
 	-webkit-animation: grow 1.5s linear infinite;
 	animation: grow 1.5s linear infinite; // animation barre 1 
 }
-
 .loader-bars:after {
 	left: 0px;
 	-webkit-animation: grow 1.5s linear -.5s infinite;
 	animation: grow 1.5s linear -.5s infinite; // animation barre 2 
 }
-
 .loader-bars span {
 	left: 50px;
 	-webkit-animation: grow 1.5s linear -1s infinite;
@@ -72,7 +68,6 @@ a{
 html{
     scroll-behavior: smooth;
 }
-
 .header{
     &__img{
         width: 100%;
@@ -137,6 +132,7 @@ input::placeholder{
         margin: 30px auto 0 auto;
         &:hover{
             box-shadow: 1px 1px 10px black;
+            background: linear-gradient(175deg, #f38ad5, #a668f1);
         }     
     }
 }
@@ -238,7 +234,6 @@ input::placeholder{
                 transition-duration: 2s;
             }
         }
-
     }
     .vide{
         opacity: 1;
@@ -304,8 +299,7 @@ input::placeholder{
         }
     }
 }
-// CSS DE LA PAGE MENU 
-
+// CSS DES PAGES DES MENUS
 .menu--nav{
     margin: 0px;
     position: relative;
@@ -412,7 +406,6 @@ input::placeholder{
         border-radius: 20px;
         box-shadow: 0 0 20px rgba(94, 63, 63, 0.200);
         overflow: hidden;
-
         // Animation pour les articles 
         
         -webkit-animation: remonteeArticle 3s both;
@@ -424,15 +417,10 @@ input::placeholder{
             .menu--section__conteneur{
                 margin-right: 0rem;
                 margin-top: 0;
-                opacity: 1;
-                
-               
+                opacity: 1; 
             }
             .menu--section__check i{
                 animation: rotation 0.5s 0.2s both;
-            }
-            p.menu--section__prix{
-                //margin-right: 100px;
             }
         }
         // Fin de l'hover du block vert 
@@ -443,8 +431,7 @@ input::placeholder{
             font-weight: 500;
             text-overflow: ellipsis;
             overflow: hidden;
-            white-space: nowrap;
-           
+            white-space: nowrap;   
         }
         p{
             margin: 0px;
@@ -455,11 +442,9 @@ input::placeholder{
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-           
             &.menu--section__prix{
-                margin-right: 10px; // A réécrire 
+                margin-right: 10px;
                 font-weight: 500;
-                text-overflow: normal;
                 overflow: visible;
                 transition-duration: 1s;   
             }   
@@ -473,10 +458,8 @@ input::placeholder{
         flex: 1;
     }
     &__conteneur {
-        //visibility: hidden;
         position: relative;
         background-color: #99E2D0;
-        //margin: -5rem -5rem -1rem 0rem;
         margin-right: -5rem;
         width: 80px;
         height: 76px;
@@ -529,7 +512,6 @@ input::placeholder{
         transform: rotate(360deg);
     }
 }
-
 // Fin fonction rotation validé 
 .menu--section__entree .menu--section__article:nth-of-type(1){
     animation-delay: 0.1s;
@@ -572,9 +554,10 @@ input::placeholder{
     font-size: 1.2em;
     &:hover{
         box-shadow: 1px 1px 10px black;
+        background: linear-gradient(175deg, #f38ad5, #a668f1);
     }   
 }
-// Début du copie de la fonction 
+// Début de la fonction de la remontée des articles 
 @-webkit-keyframes remonteeArticle {
     0% {
       -webkit-transform: translateY(100px);
@@ -586,9 +569,8 @@ input::placeholder{
               transform: translateY(0px);
       opacity: 1;
     }
-  }
-  
-  @keyframes remonteeArticle {
+}
+@keyframes remonteeArticle {
     0% {
       -webkit-transform: translateY(100px);
               transform: translateY(100px);
@@ -599,10 +581,10 @@ input::placeholder{
               transform: translateY(0px);
       opacity: 1;
     }
-  }
-// Fin copie de la fonction   
+}
+// Fin de la fonction de la remontée des articles  
 
-// Fin de la copie de la page menu
+// FIN DU CODE CSS DES PAGES DES MENUS 
 footer{
     background-color: #353535;
     color: #FFF;
@@ -635,54 +617,39 @@ footer{
     }
     ul{
          margin-top: 25px;
-
     }
     .fa-hands{
         font-size: 0.70em;
     }
 }
 //Animation pour le chargement de la page 
-
-@-webkit-keyframes chargementt {
+@-webkit-keyframes chargementPage {
     0% {
-        -webkit-transform: background(#FFF);
-                transform: background(#FFF);
         opacity: 1;
       }
       100% {
-        -webkit-transform: background(#FFF);
-                transform: background(#FFF);
         opacity: 0;
       }
-  }
-  
-  @keyframes chargementt {
+}
+@keyframes chargementPage {
     0% {
-      -webkit-transform: background(#FFF);
-              transform: background(#FFF);
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      -webkit-transform: background(#FFF);
-              transform: background(#FFF);
-      opacity: 0;
-      visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
     }
-  }
+}
 // Fin animation chargement de la page 
 //Animation pour l'effet de chargement  
-
 @-webkit-keyframes grow {
 	0% { -webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
 	50% { -webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
 	100% { -webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
 }
-
 @keyframes grow {
 	0% { -webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
 	50% { -webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
 	100% { -webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
 }
-
 // Fin animation de l'effet de chargement 
-
